@@ -1,0 +1,7 @@
+TARGETNAME=rccom
+TARGETPATH=.
+TARGETTYPE=DRIVER
+
+#TARGETLIBS=$(SDK_LIB_PATH)\ntoskrnl.lib $(SDK_LIB_PATH)\hal.lib
+
+SOURCES=rccom.c uart.c version.rc

@@ -1,0 +1,21 @@
+;
+; MFS Info file
+;
+; Copyright Marius Greuel 1997. All rights reserved.
+;
+
+[Include]
+Airport1.ifo
+Tree1.ifo
+
+[Objects]
+Airport1,        -1,0,0
+Tree1,           40,0,80
+Tree1,           50,0,70
+Tree1,           45,0,60
+Tree1,            5,0,90
+Tree1,          -10,0,80
+Tree1,          -20,0,70
+Tree1,          -15,0,60
+Tree1,           -5,0,90
+

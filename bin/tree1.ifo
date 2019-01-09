@@ -1,0 +1,22 @@
+;
+; MFS Info file
+;
+; Copyright Marius Greuel 1997. All rights reserved.
+;
+
+[Tree1]
+Points = Tree1.Points
+Polygons = Tree1.Polygons
+
+[Tree1.Points]
+G1 =  0,4,0
+G2 = -1,1,0
+G3 =  1,1,0
+W1 = -.2, 0, 0
+W2 = -.2, 1, 0
+W3 =  .2, 1, 0
+W4 =  .2, 0, 0
+
+[Tree1.Polygons]
+-, MGreen, -, MGreen, G1, G2, G3
+-, Brown, -, Brown, W1, W2, W3, W4

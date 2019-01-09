@@ -1,0 +1,38 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by RCCom.rc
+//
+#define HIDNEXT                         0x80ca2329    // IDD_CAL
+#define HIDPREV                         0x80ca232a    // IDD_CAL
+#define HID_CAL_BAR1                    0x80ca13ed    // IDD_CAL
+#define HID_CAL_BAR10                   0x80ca13f6    // IDD_CAL
+#define HID_CAL_BAR2                    0x80ca13ee    // IDD_CAL
+#define HID_CAL_BAR3                    0x80ca13ef    // IDD_CAL
+#define HID_CAL_BAR4                    0x80ca13f0    // IDD_CAL
+#define HID_CAL_BAR5                    0x80ca13f1    // IDD_CAL
+#define HID_CAL_BAR6                    0x80ca13f2    // IDD_CAL
+#define HID_CAL_BAR7                    0x80ca13f3    // IDD_CAL
+#define HID_CAL_BAR8                    0x80ca13f4    // IDD_CAL
+#define HID_CAL_BAR9                    0x80ca13f5    // IDD_CAL
+#define HID_CAL_COMMAND                 0x80ca13ec    // IDD_CAL
+#define HID_EXT_COM_IRQ                 0x80cc145c    // IDD_EXT
+#define HID_EXT_COM_PORT                0x80cc145b    // IDD_EXT
+#define HID_EXT_INVPULSE                0x80cc1456    // IDD_EXT
+#define HID_EXT_PULSE_MAX               0x80cc1454    // IDD_EXT
+#define HID_EXT_PULSE_MIDDLE            0x80cc1452    // IDD_EXT
+#define HID_EXT_PULSE_SYNC              0x80cc1450    // IDD_EXT
+#define HID_STATIC                      0x80ccffff    // IDD_EXT
+#define HID_TEST_CHANNEL1               0x80c81393    // IDD_TEST
+#define HID_TEST_CHANNEL10              0x80c8139c    // IDD_TEST
+#define HID_TEST_CHANNEL2               0x80c81394    // IDD_TEST
+#define HID_TEST_CHANNEL3               0x80c81395    // IDD_TEST
+#define HID_TEST_CHANNEL4               0x80c81396    // IDD_TEST
+#define HID_TEST_CHANNEL5               0x80c81397    // IDD_TEST
+#define HID_TEST_CHANNEL6               0x80c81398    // IDD_TEST
+#define HID_TEST_CHANNEL7               0x80c81399    // IDD_TEST
+#define HID_TEST_CHANNEL8               0x80c8139a    // IDD_TEST
+#define HID_TEST_CHANNEL9               0x80c8139b    // IDD_TEST
+#define HID_TEST_LEFT_BAR               0x80c8138b    // IDD_TEST
+#define HID_TEST_LEFT_JOY               0x80c81389    // IDD_TEST
+#define HID_TEST_RIGHT_BAR              0x80c8138c    // IDD_TEST
+#define HID_TEST_RIGHT_JOY              0x80c8138a    // IDD_TEST
+#define HID_TEST_STATUS                 0x80c813a6    // IDD_TEST

@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Mfs - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP88.tmp" with contents
+[
+mglibd.lib kernel32.lib user32.lib gdi32.lib comctl32.lib comdlg32.lib advapi32.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Mfs.pdb" /debug /machine:I386 /out:"../bin/Mfs.exe" /pdbtype:sept /libpath:"../../mglib" 
+.\Debug\3dengine.obj
+.\Debug\3dmath.obj
+.\Debug\Airplane.obj
+.\Debug\Calcmod.obj
+.\Debug\Display.obj
+.\Debug\Heli.obj
+.\Debug\Infofile.obj
+.\Debug\Keys.obj
+.\Debug\Menu.obj
+.\Debug\Mfs.obj
+.\Debug\Misc.obj
+.\Debug\Registy.obj
+.\Debug\Script.obj
+.\Debug\Stats.obj
+.\Debug\Statusbar.obj
+.\Debug\StdAfx.obj
+.\Debug\Toolbar.obj
+.\Debug\Toolbox.obj
+.\Debug\Variable.obj
+.\Debug\Vars.obj
+.\Debug\Wind.obj
+.\Debug\Winmain.obj
+.\Debug\Dlg_About.obj
+.\Debug\Dlg_FileNew.obj
+.\Debug\Dlg_FileOpen.obj
+.\Debug\Dlg_FileProperties.obj
+.\Debug\Dlg_FileSave.obj
+.\Debug\Dlg_Options.obj
+.\Debug\Dlg_Parameters.obj
+.\Debug\Mfs.res
+.\RCCom.lib
+]
+Creating command line "link.exe @C:\TEMP\RSP88.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Mfs.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

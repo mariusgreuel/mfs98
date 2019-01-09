@@ -1,0 +1,12 @@
+#include <winver.h>
+#include "version.h"
+
+#define VER_FILEDESCRIPTION_STR     "R/C communication device"
+#define VER_INTERNALNAME_STR        "rccom.vxd"
+#define VER_FILETYPE                VFT_VXD
+#define VER_FILESUBTYPE             0
+#define VER_FILEVERSION             4,0,VER_MAJOR,VER_MINOR
+#define VER_FILEVERSION_STR         VER_STRING
+
+#include "..\..\common\mfs.ver"
+

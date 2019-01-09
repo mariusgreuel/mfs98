@@ -1,0 +1,14 @@
+[mfslog.txt - 1/9/2019, 17:42:56]
+
+Build object 'Airport1': 4 vertices, 1 faces
+Build object 'Tree1': 7 vertices, 2 faces
+Build object 'Airplane': 45 vertices, 22 faces
+Build object 'Trainer1.Shadow': 16 vertices, 4 faces
+ERROR: default.ifs(): Section 'Scenery' is invalid
+Initialize DirectDraw object
+SetMode windowed mode: (0x0x0)
+Creating primary surface and back buffer: Got offscreen VRAM
+
+FATAL: Could not open the RCCOM device
+
+FATAL: Could not close RCCOM device

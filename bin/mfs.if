@@ -1,0 +1,12 @@
+;
+; MFS Master Info file
+;
+; Copyright Marius Greuel 1997. All rights reserved.
+;
+
+[Include]
+colors.if
+
+[Objects]
+Airplane, 0,0,0
+

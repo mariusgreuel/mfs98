@@ -1,0 +1,28 @@
+/****************************************************************************
+
+ Copyright (C) 1997 Marius Greuel. All rights reserved.
+
+ Title:     common.rc : common resource definitions
+
+ Version:   1.00
+
+ Date:      15-Jan-97
+
+ Author:    MG
+
+****************************************************************************/
+
+#define IDS_REGK_MFS            50000
+#define IDS_REGK_MFS_VER        50001
+
+#ifdef RC_INVOKED
+
+STRINGTABLE MOVEABLE DISCARDABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+BEGIN
+IDS_REGK_MFS,           "Software\\Marius Greuel\\MFS"
+IDS_REGK_MFS_VER,       "1.01"
+END
+
+#endif
+

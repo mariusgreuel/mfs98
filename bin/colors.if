@@ -1,0 +1,58 @@
+;
+; colors.if : color definitions for MFS
+;
+; Copyright Marius Greuel 1997. All rights reserved.
+;
+
+;Format: <color name> = <palette index>, <red>, <green>, <blue>
+[Colors]
+-          =  -1,   0,   0,   0  ; reserved (transparent color)
+Shadow     =  -2,   0,   0,   0  ; reserved (translucent color)
+
+Ground     =  60, 125, 180,  40  ; reserved
+Sky        =  61, 105, 120, 220  ; reserved
+GridGround =  62, 100, 150,  20  ; reserved
+GridSky    =  63,  50,  50, 100  ; reserved
+
+Black      =   0,  10,  10,  10
+DarkBlue   =   1,  30,  30, 200
+DarkGreen  =   2,  40, 185,  25
+DarkMGreen =   3,  40, 160,  20
+DarkRed    =   4, 200,   0,   0
+DarkBrown  =   5, 200, 115,   0
+DarkYellow =   6, 225, 225,   0
+DarkWhite  =   7, 220, 220, 220
+Gray       =   8, 160, 160, 160
+Blue       =   9,  90,  90, 230
+Green      =  10, 100, 230,  90
+MGreen     =  11,  50, 200,  30
+Red        =  12, 255,  20,  20
+Brown      =  13, 255, 160,  30
+Yellow     =  14, 255, 255,   0
+White      =  15, 255, 255, 255
+
+; damped colors
+
+_Ground     = 124, 101, 148,  32  ; reserved
+_Sky        = 125,  71,  89, 211  ; reserved
+_GridGround = 126,  77, 113,  15  ; reserved
+_GridSky    = 127,  50,  50, 100  ; reserved
+
+_Black      =  64,   0,   0,   0
+_DarkBlue   =  65,  24,  24, 163
+_DarkGreen  =  66,  33, 148,  20
+_DarkMGreen =  67,  31, 123,  15
+_DarkRed    =  68, 157,   0,   0
+_DarkBrown  =  69, 157,  90,   0
+_DarkYellow =  70, 183, 183,   0
+_DarkWhite  =  71, 198, 198, 198
+_Gray       =  72, 139, 139, 139
+_Blue       =  73,  54,  54, 224
+_Green      =  74,  67, 224,  54
+_MGreen     =  75,  41, 163,  24
+_Red        =  76, 232,   0,   0
+_Brown      =  77, 213, 133,  30
+_Yellow     =  78, 215, 215,   0
+_White      =  79, 225, 225, 225
+
+

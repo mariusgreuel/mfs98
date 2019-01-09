@@ -1,0 +1,92 @@
+/****************************************************************************
+
+ Copyright (C) 1997 Marius Greuel. All rights reserved.
+
+ Title:     mfs.ver
+
+ Version:   1.00
+
+ Date:      15-Jan-97
+
+ Author:    MG
+
+****************************************************************************/
+
+#ifdef RC_INVOKED
+
+#define VER_PRODUCTBUILD            1
+#define VER_PRODUCTVERSION          4,00,VER_PRODUCTBUILD,1
+#define VER_PRODUCTVERSION_STR      "4.00.01.1"
+#define VER_COMPANYNAME_STR         "Marius Greuel"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright \251 Marius Greuel 1997"
+#define VER_PRODUCTNAME_STR         "MFS Modellflugsimulator"
+
+#ifdef DEBUG
+#define VER_DEBUG                   VS_FF_DEBUG
+#else
+#define VER_DEBUG                   0
+#endif
+
+#ifdef BETA
+#define VER_PRERELEASE              VS_FF_PRERELEASE
+#else
+#define VER_PRERELEASE              0
+#endif
+
+#define VER_FILEFLAGSMASK           VS_FFI_FILEFLAGSMASK
+#define VER_FILEOS                  VOS__WINDOWS32
+#define VER_FILEFLAGS               (VER_PRERELEASE|VER_DEBUG)
+
+#ifndef VER_FILEVERSION
+#define VER_FILEVERSION VER_PRODUCTVERSION
+#endif
+
+#ifndef VER_FILEVERSION_STR
+#define VER_FILEVERSION_STR VER_PRODUCTVERSION_STR
+#endif
+
+#ifndef VER_ORIGINALFILENAME_STR
+#define VER_ORIGINALFILENAME_STR VER_INTERNALNAME_STR
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    VER_FILEVERSION
+PRODUCTVERSION VER_PRODUCTVERSION
+FILEFLAGSMASK  VER_FILEFLAGSMASK
+FILEFLAGS      VER_FILEFLAGS
+FILEOS         VER_FILEOS
+FILETYPE       VER_FILETYPE
+FILESUBTYPE    VER_FILESUBTYPE
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704B0"   /* LANG_GERMAN/SUBLANG_GERMAN, Unicode CP */
+//        BLOCK "040904B0"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+        BEGIN
+            VALUE "CompanyName",     VER_COMPANYNAME_STR
+#ifdef DEBUG
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR " Debug"
+            VALUE "FileVersion",     VER_FILEVERSION_STR "D"
+#else
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",     VER_FILEVERSION_STR
+#endif
+            VALUE "InternalName",    VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR
+            VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR
+            VALUE "ProductName",     VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR
+        END
+
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0407, 0x04b0	/* LANG_GERMAN/SUBLANG_GERMAN, Unicode CP */
+//        VALUE "Translation", 0x0409, 0x04b0	/* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+    END
+END
+
+#endif // RC_INVOKED
+
+

@@ -1,0 +1,65 @@
+#
+# makefile for Rccom.vxd
+#
+# Copyright (c) Marius Greuel 1997
+#
+
+DEVICE          = RCCOM
+
+OBJS            = $(BIN)\$(DEVICE).obj $(BIN)\uart.obj
+
+#DEBUG = 
+
+!ifndef DEBUG
+BIN             = RETAIL
+DDEBUG          = -DDEBLEVEL=0 -DCHICAGO
+!else
+BIN             = DEBUG
+DDEBUG          = -DDEBUG -DDBG=1 -DDEBLEVEL=1 -DCHICAGO
+!endif
+
+CFLAGS          = -Zp -Zl -Gs -c
+AFLAGS          = -coff -W3 -WX -Zd -c -Cx -DMASM6 -DWIN40COMPAT -DIS_32 -DWIN32 -DSTD_CALL -DBLD_COFF 
+RFLAGS          = -r -zm -bt=windows
+LFLAGS          = -MACHINE:i386 -VXD -NOD
+
+!ifdef DEBUG
+CFLAGS          = $(CFLAGS) -Zdp $(DDEBUG)
+AFLAGS          = $(AFLAGS) -Zf -Zi $(DDEBUG)
+RFLAGS          = $(RFLAGS) $(DDEBUG)
+LFLAGS          = $(LFLAGS) -DEBUG:FULL -DEBUGTYPE:MAP
+!endif
+
+target: $(BIN) $(BIN)\$(DEVICE).VXD
+
+.asm{$(BIN)}.obj:
+        $(BASEDIR)\bin\win98\ml $(AFLAGS) -Fo$@ $<
+
+.rc{$(BIN)}.res:
+        $(BASEDIR)\bin\win95\rc16 $(RFLAGS) -Fo$@ $<
+
+$(BIN):
+        @if not exist $(BIN)\nul md $(BIN)
+
+###############################################
+
+all : $(BIN)\$(DEVICE).VXD
+
+!ifdef DEBUG
+OBJS = $(OBJS) $(BIN)\mydebug.obj
+!endif
+
+$(BIN)\$(DEVICE).vxd: $(DEVICE).def $(BIN)\$(DEVICE).res $(OBJS)
+        $(BASEDIR)\bin\win95\link @<<$(BIN)\$(DEVICE).lnk
+$(LFLAGS) 
+-DEF:$(DEVICE).def
+-OUT:$(BIN)\$(DEVICE).vxd
+-MAP:$(BIN)\$(DEVICE).map
+$(OBJS)
+<<
+        $(BASEDIR)\bin\win98\adrc2vxd $(BIN)\$(DEVICE).vxd $(BIN)\$(DEVICE).res
+        $(BASEDIR)\bin\win98\mapsym -nologo -s -o $(BIN)\$(DEVICE).sym $(BIN)\$(DEVICE).map
+
+clean :
+        - @echo j | rd /s debug >nul 2>nul
+        - @echo j | rd /s retail >nul 2>nul

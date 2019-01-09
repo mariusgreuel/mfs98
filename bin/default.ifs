@@ -1,0 +1,6 @@
+;default.ifs
+
+[Scenery]
+Model="Trainer.ifm"
+World=world1.ifw
+

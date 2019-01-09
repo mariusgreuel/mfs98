@@ -1,0 +1,587 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_RCBOX               ICON    DISCARDABLE     "res\\rcbox.ico"
+IDI_PULSE               ICON    DISCARDABLE     "res\\pulse.ico"
+IDI_PLUG                ICON    DISCARDABLE     "res\\plug.ico"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEST DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Testen"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "Position",ID_STATIC,6,6,218,92
+    LTEXT           "Testen Sie die Knüppelbewegungen und die Schieber.",
+                    ID_STATIC,16,18,198,8
+    LISTBOX         ID_TEST_LEFT_JOY,25,32,44,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_TEST_LEFT_JOY
+    LISTBOX         ID_TEST_RIGHT_JOY,161,32,44,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_TEST_RIGHT_JOY
+    LISTBOX         ID_TEST_LEFT_BAR,91,32,11,40,LBS_NOREDRAW | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT,0,
+                    HID_TEST_LEFT_BAR
+    LISTBOX         ID_TEST_RIGHT_BAR,127,32,11,40,LBS_NOREDRAW | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT,0,
+                    HID_TEST_RIGHT_BAR
+    CTEXT           "linker\nKnüppel",ID_STATIC,32,75,30,16,0,0,HID_STATIC
+    CTEXT           "rechter\nKnüppel",ID_STATIC,168,75,30,16,0,0,HID_STATIC
+    CTEXT           "linker\nSchieber",ID_STATIC,79,75,35,16,0,0,HID_STATIC
+    CTEXT           "rechter\nSchieber",ID_STATIC,116,75,35,16,0,0,
+                    HID_STATIC
+    GROUPBOX        "Alle Kanäle",ID_STATIC,6,102,218,66
+    LTEXT           "Kanal 1:",ID_STATIC,15,114,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 2:",ID_STATIC,15,124,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 3:",ID_STATIC,15,134,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 4:",ID_STATIC,15,144,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 5:",ID_STATIC,15,154,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 7:",ID_STATIC,105,124,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 6:",ID_STATIC,105,114,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 8:",ID_STATIC,105,134,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 9:",ID_STATIC,105,144,45,8,0,0,HID_STATIC
+    LTEXT           "Kanal 10:",ID_STATIC,105,154,45,8,0,0,HID_STATIC
+    RTEXT           "",ID_TEST_CHANNEL1,60,114,35,8,0,0,HID_TEST_CHANNEL1
+    RTEXT           "",ID_TEST_CHANNEL2,60,124,35,8,0,0,HID_TEST_CHANNEL2
+    RTEXT           "",ID_TEST_CHANNEL3,60,134,35,8,0,0,HID_TEST_CHANNEL3
+    RTEXT           "",ID_TEST_CHANNEL4,60,144,35,8,0,0,HID_TEST_CHANNEL4
+    RTEXT           "",ID_TEST_CHANNEL5,60,154,35,8,0,0,HID_TEST_CHANNEL5
+    RTEXT           "",ID_TEST_CHANNEL6,150,114,35,8,0,0,HID_TEST_CHANNEL6
+    RTEXT           "",ID_TEST_CHANNEL7,150,124,35,8,0,0,HID_TEST_CHANNEL7
+    RTEXT           "",ID_TEST_CHANNEL8,150,134,35,8,0,0,HID_TEST_CHANNEL8
+    RTEXT           "",ID_TEST_CHANNEL9,150,144,35,8,0,0,HID_TEST_CHANNEL9
+    RTEXT           "",ID_TEST_CHANNEL10,150,154,35,8,0,0,HID_TEST_CHANNEL10
+    GROUPBOX        "Status",ID_STATIC,6,173,218,36
+    LTEXT           "",ID_TEST_STATUS,16,184,194,16,0,0,HID_TEST_STATUS
+END
+
+IDD_CAL DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Kalibrierung"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Kalibrierungsinformationen",ID_STATIC,6,6,218,130
+    LTEXT           "Sie können Ihre Fernsteuerung automatisch kalibrieren lassen. Der Assistent führt Sie Schritt für Schritt durch diesen Vorgang.",
+                    ID_STATIC,42,18,172,24
+    ICON            IDI_RCBOX,ID_STATIC,14,19,20,20
+    EDITTEXT        ID_CAL_COMMAND,42,47,172,58,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY,0,HID_CAL_COMMAND
+    PUSHBUTTON      "&Kalibrieren",IDNEXT,169,113,45,14,0,0,HIDNEXT
+    PUSHBUTTON      "< &Zurück",IDPREV,124,113,45,14,0,0,HIDPREV
+    GROUPBOX        "Alle Kanäle in der Übersicht",ID_STATIC,6,140,218,69
+    LISTBOX         ID_CAL_BAR1,20,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR1
+    LISTBOX         ID_CAL_BAR2,40,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR2
+    LISTBOX         ID_CAL_BAR3,60,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR3
+    LISTBOX         ID_CAL_BAR4,80,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR4
+    LISTBOX         ID_CAL_BAR5,100,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR5
+    LISTBOX         ID_CAL_BAR6,120,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR6
+    LISTBOX         ID_CAL_BAR7,140,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR7
+    LISTBOX         ID_CAL_BAR8,160,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR8
+    LISTBOX         ID_CAL_BAR9,180,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR9
+    LISTBOX         ID_CAL_BAR10,200,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR10
+    CTEXT           "1",ID_STATIC,20,195,11,8
+    CTEXT           "2",ID_STATIC,40,195,11,8
+    CTEXT           "3",ID_STATIC,60,195,11,8
+    CTEXT           "4",ID_STATIC,80,195,11,8
+    CTEXT           "5",ID_STATIC,100,195,11,8
+    CTEXT           "6",ID_STATIC,120,195,11,8
+    CTEXT           "7",ID_STATIC,140,195,11,8
+    CTEXT           "8",ID_STATIC,160,195,11,8
+    CTEXT           "9",ID_STATIC,180,195,11,8
+    CTEXT           "10",ID_STATIC,200,195,11,8
+END
+
+IDD_EXT DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Erweitert"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Timingeinstellungen",ID_STATIC,6,6,218,96
+    ICON            IDI_PULSE,ID_STATIC,14,19,20,20
+    LTEXT           "Sie können die Timingeinstellungen ändern, falls Ihre Fernsteuerung von dem Standart abweicht.",
+                    ID_STATIC,42,18,172,16
+    LTEXT           "Impulsbreite Syn&c. [us]:",ID_STATIC,42,40,83,8,0,0,
+                    HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_SYNC,128,38,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_SYNC
+    CONTROL         "",ID_EXT_UD_PSYNC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,38,11,14
+    LTEXT           "Impulsbreite &Mitte [us]:",ID_STATIC,42,55,83,8,0,0,
+                    HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_MIDDLE,128,53,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_MIDDLE
+    CONTROL         "",ID_EXT_UD_PMIDDLE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,53,11,14
+    LTEXT           "&Bereich +/- [us]:",ID_STATIC,42,70,83,8,0,0,HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_MAX,128,68,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_MAX
+    CONTROL         "",ID_EXT_UD_PMAX,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,68,11,14
+    CONTROL         "&Negativ Impulsanlage",ID_EXT_INVPULSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,86,172,10,0,
+                    HID_EXT_INVPULSE
+    GROUPBOX        "Anschlußeinstellungen",ID_STATIC,6,107,218,102
+    LTEXT           "Sie können die Portadresse und den IRQ der seriellen Schnittstelle manuell ändern, falls die Interface- erkennnung nicht korrekt funtioniert. Beachten Sie jedoch, daß falsche Einstellungen zu System- instabilitäten führen können.",
+                    ID_STATIC,42,119,172,40
+    ICON            IDI_PLUG,ID_STATIC,14,121,20,20
+    LTEXT           "&Schnittstelle:",ID_STATIC,42,164,83,8,0,0,HID_STATIC
+    COMBOBOX        ID_EXT_COM_PORT,128,162,48,50,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,0,
+                    HID_EXT_COM_PORT
+    LTEXT           "&IRQ:",ID_STATIC,42,179,83,8,0,0,HID_STATIC
+    COMBOBOX        ID_EXT_COM_IRQ,128,177,48,50,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,0,
+                    HID_EXT_COM_IRQ
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_CAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_EXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REMOTECONTROL       "Fernsteuerung"
+    1019                    "Ihr Betriebssystem wird vom RC-Interface nicht unterstützt.\nDieses Programm ist nur unter Windows 95/98/NT lauffähig."
+    IDS_RCERR_OK            "Emfange Daten..."
+    1021                    "Es ist ein unbekannter Fehler aufgetreten."
+    1022                    "Der Gerätetreiber RCCOM konnte nicht geöffnet werden."
+    1023                    "Die Versionkennung des Gerätetreibers RCCOM ist ungültig."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1024                    "R/C Interface gefunden, aber:\nDie Fernsteuerung sendet keine Daten."
+    1025                    "R/C Interface gefunden, aber:\nDie Fernsteuerung sendet ungültige Daten (z.B. PCM Daten)."
+    1026                    "Das R/C Interface konnte nicht gefunden werden."
+    1027                    "Das R/C Interface konnte nicht an der Schnittstelle COM%d (Port %04xh, IRQ %x) gefunden werden."
+    1028                    "Die Schnittstelle COM%d (Port %04xh, IRQ %x) ist physikalisch nicht vorhanden."
+    1029                    "Die Schnittstelle COM%d (Port %04xh, IRQ %x) ist bereits von einem anderen Gerät belegt."
+    1030                    "Die Schnittstelle COM%d (Port %04xh, IRQ %x) konnte nicht geöffnet werden."
+    1031                    "Der Schnittstelle COM%d (Port %04xh, IRQ %x) konnte kein Interrupt zugeordnet werden."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CALIBRATE_BUTTON    "&Kalibrieren"
+    IDS_CONTINUE_BUTTON     "&Weiter >"
+    IDS_FINISH_BUTTON       "&Beenden"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAL_SIDE0           "linken"
+    IDS_CAL_SIDE1           "rechten"
+    IDS_CAL_SIDE2           "unteren"
+    IDS_CAL_SIDE3           "oberen"
+    IDS_CAL_PRESSCONTINUE   "Drücken Sie 'Weiter' um fortzufahren."
+    IDS_CAL_PRESSFINISH     "Die Kalibrierung ist abgeschlossen. Klicken Sie auf 'Beenden', um die Änderungen zu speichern. Klicken Sie anschließend auf die Registerkarte 'Testen', um die Kalibrierung zu testen."
+    IDS_CAL_START           "Klicken Sie 'Kalibrieren' um zu den Kalibriervorgang zu starten. Führen Sie anschließend die angezeigten Anweisungen aus."
+    IDS_CAL_CENTER          "Zentrierung: Bringen Sie alle Knüppel, Schieber und Kanal-Schalter in die Mittenposition. "
+    IDS_CAL_STICK           "%d. Schritt: Bringen Sie den %s Knüppel an den %s Anschlag und halten Sie ihn dort. "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAL_BADDATA         "Die Kalibrierung ist nicht möglich, da folgender Fehler auftrat:\n"
+    IDS_CAL_ERROR           "Kalibrierungsfehler"
+    IDS_CAL_WARN_CORRECT    "Korrigieren Sie deren Position und klicken Sie auf 'Wiederholen'.\nIst trotzt Wiederholung keine eindeutige Erkennung möglich, klicken Sie auf 'Ignorieren'."
+    IDS_CAL_WARN_CENTER     "Alle Knüppel, Schieber und Kanal-Schalter müssen sich ihrer Mittenposition befinden.\n"
+    IDS_CAL_WARN_STICK1     "Bringen Sie nur den %s Knüppel an den %s Anschlag.\nAlle andern Knüppelachsen müssen sich in ihrer Mittenposition befinden.\n"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEST DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Test"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "Position",ID_STATIC,6,6,218,92
+    LTEXT           "Test your joysticks and sliders",ID_STATIC,16,18,198,8
+    LISTBOX         ID_TEST_LEFT_JOY,25,32,44,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_TEST_LEFT_JOY
+    LISTBOX         ID_TEST_RIGHT_JOY,161,32,44,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_TEST_RIGHT_JOY
+    LISTBOX         ID_TEST_LEFT_BAR,91,32,11,40,LBS_NOREDRAW | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT,0,
+                    HID_TEST_LEFT_BAR
+    LISTBOX         ID_TEST_RIGHT_BAR,127,32,11,40,LBS_NOREDRAW | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT,0,
+                    HID_TEST_RIGHT_BAR
+    CTEXT           "Left\nStick",ID_STATIC,32,75,30,16,0,0,HID_STATIC
+    CTEXT           "Right\nStick",ID_STATIC,168,75,30,16,0,0,HID_STATIC
+    CTEXT           "Left\nSlider",ID_STATIC,79,75,35,16,0,0,HID_STATIC
+    CTEXT           "Right\nSlider",ID_STATIC,116,75,35,16,0,0,HID_STATIC
+    GROUPBOX        "All Channels",ID_STATIC,6,102,218,66
+    LTEXT           "Channel 1:",ID_STATIC,15,114,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 2:",ID_STATIC,15,124,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 3:",ID_STATIC,15,134,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 4:",ID_STATIC,15,144,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 5:",ID_STATIC,15,154,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 7:",ID_STATIC,105,124,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 6:",ID_STATIC,105,114,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 8:",ID_STATIC,105,134,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 9:",ID_STATIC,105,144,45,8,0,0,HID_STATIC
+    LTEXT           "Channel 10:",ID_STATIC,105,154,45,8,0,0,HID_STATIC
+    RTEXT           "",ID_TEST_CHANNEL1,60,114,35,8,0,0,HID_TEST_CHANNEL1
+    RTEXT           "",ID_TEST_CHANNEL2,60,124,35,8,0,0,HID_TEST_CHANNEL2
+    RTEXT           "",ID_TEST_CHANNEL3,60,134,35,8,0,0,HID_TEST_CHANNEL3
+    RTEXT           "",ID_TEST_CHANNEL4,60,144,35,8,0,0,HID_TEST_CHANNEL4
+    RTEXT           "",ID_TEST_CHANNEL5,60,154,35,8,0,0,HID_TEST_CHANNEL5
+    RTEXT           "",ID_TEST_CHANNEL6,150,114,35,8,0,0,HID_TEST_CHANNEL6
+    RTEXT           "",ID_TEST_CHANNEL7,150,124,35,8,0,0,HID_TEST_CHANNEL7
+    RTEXT           "",ID_TEST_CHANNEL8,150,134,35,8,0,0,HID_TEST_CHANNEL8
+    RTEXT           "",ID_TEST_CHANNEL9,150,144,35,8,0,0,HID_TEST_CHANNEL9
+    RTEXT           "",ID_TEST_CHANNEL10,150,154,35,8,0,0,HID_TEST_CHANNEL10
+    GROUPBOX        "Status",ID_STATIC,6,173,218,36
+    LTEXT           "",ID_TEST_STATUS,16,184,194,16,0,0,HID_TEST_STATUS
+END
+
+IDD_EXT DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Extended Settings"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Timing",ID_STATIC,6,6,218,96
+    ICON            IDI_PULSE,ID_STATIC,14,19,20,20
+    LTEXT           "You may change the timing settings, if your R/C transmitter differs form the standart.",
+                    ID_STATIC,42,18,172,16
+    LTEXT           "Pulse Width &Sync. [us]:",ID_STATIC,42,40,83,8,0,0,
+                    HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_SYNC,128,38,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_SYNC
+    CONTROL         "",ID_EXT_UD_PSYNC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,38,11,14
+    LTEXT           "Pulse Width &Center [us]:",ID_STATIC,42,55,83,8,0,0,
+                    HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_MIDDLE,128,53,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_MIDDLE
+    CONTROL         "",ID_EXT_UD_PMIDDLE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,53,11,14
+    LTEXT           "&Deviation +/- [us]:",ID_STATIC,42,70,83,8,0,0,
+                    HID_STATIC
+    EDITTEXT        ID_EXT_PULSE_MAX,128,68,32,13,ES_NUMBER,0,
+                    HID_EXT_PULSE_MAX
+    CONTROL         "",ID_EXT_UD_PMAX,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,161,68,11,14
+    CONTROL         "&Negative Pulse Radio",ID_EXT_INVPULSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,86,172,10,0,
+                    HID_EXT_INVPULSE
+    GROUPBOX        "Communication settings",ID_STATIC,6,107,218,102
+    LTEXT           "You may specify the port address and the IRQ manually, if the autodetect function does not work properly. Make sure you have the correct settings, otherwise system instability may occur.",
+                    ID_STATIC,42,119,172,40
+    ICON            IDI_PLUG,ID_STATIC,14,121,20,20
+    LTEXT           "&Communication port:",ID_STATIC,42,164,83,8,0,0,
+                    HID_STATIC
+    COMBOBOX        ID_EXT_COM_PORT,128,162,48,50,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,0,
+                    HID_EXT_COM_PORT
+    LTEXT           "&IRQ:",ID_STATIC,42,179,83,8,0,0,HID_STATIC
+    COMBOBOX        ID_EXT_COM_IRQ,128,177,48,50,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,0,
+                    HID_EXT_COM_IRQ
+END
+
+IDD_CAL DIALOGEX 0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Calibration"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "Calibration Information",ID_STATIC,6,6,218,130
+    LTEXT           "You can calibrate your R/C transmitter automatically. This wizard will guide you step by step throught the calibration process.",
+                    ID_STATIC,42,18,172,24
+    ICON            IDI_RCBOX,ID_STATIC,14,19,20,20
+    EDITTEXT        ID_CAL_COMMAND,42,47,172,58,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY,0,HID_CAL_COMMAND
+    PUSHBUTTON      "&Calibrate",IDNEXT,169,113,45,14,0,0,HIDNEXT
+    PUSHBUTTON      "< &Back",IDPREV,124,113,45,14,0,0,HIDPREV
+    GROUPBOX        "Channel Overview",ID_STATIC,6,140,218,69
+    LISTBOX         ID_CAL_BAR1,20,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR1
+    LISTBOX         ID_CAL_BAR2,40,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR2
+    LISTBOX         ID_CAL_BAR3,60,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR3
+    LISTBOX         ID_CAL_BAR4,80,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR4
+    LISTBOX         ID_CAL_BAR5,100,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR5
+    LISTBOX         ID_CAL_BAR6,120,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR6
+    LISTBOX         ID_CAL_BAR7,140,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR7
+    LISTBOX         ID_CAL_BAR8,160,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR8
+    LISTBOX         ID_CAL_BAR9,180,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR9
+    LISTBOX         ID_CAL_BAR10,200,153,11,40,LBS_NOREDRAW | 
+                    LBS_NOINTEGRALHEIGHT,0,HID_CAL_BAR10
+    CTEXT           "1",ID_STATIC,20,195,11,8
+    CTEXT           "2",ID_STATIC,40,195,11,8
+    CTEXT           "3",ID_STATIC,60,195,11,8
+    CTEXT           "4",ID_STATIC,80,195,11,8
+    CTEXT           "5",ID_STATIC,100,195,11,8
+    CTEXT           "6",ID_STATIC,120,195,11,8
+    CTEXT           "7",ID_STATIC,140,195,11,8
+    CTEXT           "8",ID_STATIC,160,195,11,8
+    CTEXT           "9",ID_STATIC,180,195,11,8
+    CTEXT           "10",ID_STATIC,200,195,11,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_EXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_CAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 224
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""..\\common\\common.rc""\r\n"
+    "#include ""version.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REMOTECONTROL       "Remote Control"
+    1019                    "Your operating system is not supported by the R/C interface.\nThis programm must be run under Windows 95/98/NT."
+    IDS_RCERR_OK            "Receiving Data..."
+    1021                    "An unkown error has occurred."
+    1022                    "The device driver RCCOM could not be loaded."
+    1023                    "The version ID of the device driver RCCOM is invalid."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1024                    "R/C Interface found, but:\nThe R/C transmitter sends no data."
+    1025                    "R/C Interface found, but:\nThe R/C transmitter sends invalid data (eg. PCM data)."
+    1026                    "The R/C Interface could not be detected automatically."
+    1027                    "The R/C Interface could not be detected on COM%d (Port %04xh, IRQ %x)."
+    1028                    "The communication port COM%d (Port %04xh, IRQ %x) is physically not present."
+    1029                    "The communication port COM%d (Port %04xh, IRQ %x) is already opened by another device."
+    1030                    "The communication port COM%d (Port %04xh, IRQ %x) could not be opened."
+    1031                    "The communication port COM%d (Port %04xh, IRQ %x) could not be assigned an interrupt."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CALIBRATE_BUTTON    "&Calibrate"
+    IDS_CONTINUE_BUTTON     "&Continue >"
+    IDS_FINISH_BUTTON       "&Finish"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAL_SIDE0           "left"
+    IDS_CAL_SIDE1           "right"
+    IDS_CAL_SIDE2           "bottom"
+    IDS_CAL_SIDE3           "top"
+    IDS_CAL_PRESSCONTINUE   "Click 'Continue' to proceed."
+    IDS_CAL_PRESSFINISH     "The calibration process is finished. Click 'Finish' to save the settings. Click on the property sheet 'Test', to test the calibraton data."
+    IDS_CAL_START           "Click 'Calibrate' to start the calibration process. Follow the displayed commands to proceed with the calibration."
+    IDS_CAL_CENTER          "Center: Move all sticks and switches at center position. "
+    IDS_CAL_STICK           "%d. Step: Move the %s stick to the %s stop and hold it in that position. "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAL_BADDATA         "The calibration was impossible due to the following error:\n"
+    IDS_CAL_ERROR           "Calibration Error"
+    IDS_CAL_WARN_CORRECT    "Correct the position of the stick(s) and click 'Retry'.\nClick 'Ignore', if no exact calibration is possible."
+    IDS_CAL_WARN_CENTER     "All sticks, sliders and switches have to be at center position.\n"
+    IDS_CAL_WARN_STICK1     "Move only the %s stick to the %s side.\nAll other sticks have to be at center position.\n"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "..\common\common.rc"
+#include "version.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

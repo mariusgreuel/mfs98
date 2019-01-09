@@ -1,0 +1,121 @@
+;
+; Trainer1.ifo
+;
+; Copyright Marius Greuel 1997. All rights reserved.
+;
+
+[Airplane]
+Name = "Trainer1"
+Points = Trainer1.Points
+Polygons = Trainer1.Polygons
+Shadow = Trainer1.Shadow
+
+[Trainer1.Shadow]
+Points = Trainer1.Shadow.Points
+Polygons = Trainer1.Shadow.Polygons
+
+[Trainer1.Points]
+N1   =  0.688,  0.094,  0.000           ;nose
+P1.1 =  0.406,  0.213, -0.075           ;1st part
+P1.2 =  0.406,  0.213,  0.075
+P1.3 =  0.406, -0.037,  0.075
+P1.4 =  0.406, -0.037, -0.075
+P2.1 =  0.000,  0.312, -0.125           ;2nd part
+P2.2 =  0.000,  0.312,  0.125
+P2.3 =  0.000, -0.062,  0.125
+P2.4 =  0.000, -0.062, -0.125
+P3.1 = -0.281,  0.225, -0.037           ;3rd part
+P3.2 = -0.281,  0.225,  0.037
+P3.3 = -0.281,  0.094,  0.037
+P3.4 = -0.281,  0.094, -0.037
+T    = -0.906,  0.156,  0.000           ;tail
+TFU1 = -0.969,  0.325,  0.000           ;tail fin
+TFU2 = -0.906,  0.325,  0.000
+TFU3 = -0.806,  0.169,  0.000
+TFD1 = -0.806,  0.144,  0.000
+TFD2 = -0.944, -0.013,  0.000
+TFD3 = -1.006, -0.013,  0.000
+SKL1 = -0.2, -0.12,  0.18               ;skid left
+SKL2 =  0.5, -0.12,  0.18
+SKL3 =  0.5, -0.12,  0.19
+SKL4 = -0.2, -0.12,  0.19
+SKR1 = -0.2, -0.12, -0.18               ;skid right
+SKR2 =  0.5, -0.12, -0.18
+SKR3 =  0.5, -0.12, -0.19
+SKR4 = -0.2, -0.12, -0.19
+R0   =  0    ,  0.4,  0                 ;rotor middle
+R1   =  1    ,  0.4,  0                 ;rotor
+R2   =  0.924,  0.4, -0.383
+R3   =  0.707,  0.4, -0.707
+R4   =  0.383,  0.4, -0.924
+R5   =  0    ,  0.4, -1
+R6   = -0.383,  0.4, -0.924
+R7   = -0.707,  0.4, -0.707
+R8   = -0.924,  0.4, -0.383
+R9   = -1    ,  0.4,  0
+R10  = -0.924,  0.4,  0.383
+R11  = -0.707,  0.4,  0.707
+R12  = -0.383,  0.4,  0.924
+R13  =  0    ,  0.4,  1
+R14  =  0.383,  0.4,  0.924
+R15  =  0.707,  0.4,  0.707
+R16  =  0.924,  0.4,  0.383
+
+[Trainer1.Polygons]
+
+Black, MGreen, -, -, N1, P1.1, P1.2
+Black, MGreen, -, -, N1, P1.2, P1.3
+Black, MGreen, -, -, N1, P1.3, P1.4
+Black, MGreen, -, -, N1, P1.4, P1.1
+
+Black, Red,    -, -, P1.1, P2.1, P2.2, P1.2
+Black, Red,    -, -, P1.2, P2.2, P2.3, P1.3
+Black, Red,    -, -, P1.3, P2.3, P2.4, P1.4
+Black, Red,    -, -, P1.4, P2.4, P2.1, P1.1
+
+Black, Brown,  -, -, P2.1, P3.1, P3.2, P2.2
+Black, Brown,  -, -, P2.2, P3.2, P3.3, P2.3
+Black, Brown,  -, -, P2.3, P3.3, P3.4, P2.4
+Black, Brown,  -, -, P2.4, P3.4, P3.1, P2.1
+
+Black, Yellow, -, -, P3.1, T, P3.2
+Black, Yellow, -, -, P3.2, T, P3.3
+Black, Yellow, -, -, P3.3, T, P3.4
+Black, Yellow, -, -, P3.4, T, P3.1
+
+-, Shadow, -, Shadow, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16
+;-, Black, -, Black, P2.1, P2.2, R0
+
+-, White, -, White, T, TFU1, TFU2, TFU3
+-, White, -, White, T, TFD1, TFD2, TFD3
+-, Black, -, Black, SKL1, SKL2, SKL3, SKL4
+-, Black, -, Black, SKR1, SKR2, SKR3, SKR4
+
+-, -, -, -, P3.1, P3.2, P3.3, P3.4      ; help plane for bsp generator
+
+[Trainer1.Shadow.Points]
+N1   =  0.688,  -0.12,  0.000
+P1.1 =  0.406,  -0.12,  0.075           ;1st part
+P1.2 =  0.406,  -0.12, -0.075
+P2.1 =  0.000,  -0.12,  0.125           ;2nd part
+P2.2 =  0.000,  -0.12, -0.125
+P3.1 = -0.281,  -0.12,  0.037           ;3rd part
+P3.2 = -0.281,  -0.12, -0.037
+T    = -0.906,  -0.12,  0.000           ;tail
+
+SKL1 = -0.2, -0.12,  0.18               ;skid left
+SKL2 =  0.5, -0.12,  0.18
+SKL3 =  0.5, -0.12,  0.19
+SKL4 = -0.2, -0.12,  0.19
+SKR1 = -0.2, -0.12, -0.18               ;skid right
+SKR2 =  0.5, -0.12, -0.18
+SKR3 =  0.5, -0.12, -0.19
+SKR4 = -0.2, -0.12, -0.19
+
+[Trainer1.Shadow.Polygons]
+-, Shadow, -, Shadow, N1, P1.1, P2.1, P3.1, P3.2, P2.2, P1.2
+-, Shadow, -, Shadow, P3.1, P3.2, T
+-, Shadow, -, Shadow, SKL1, SKL2, SKL3, SKL4
+-, Shadow, -, Shadow, SKR1, SKR2, SKR3, SKR4
+
+

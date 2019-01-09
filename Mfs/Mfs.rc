@@ -1,0 +1,574 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "version.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MFS                 ICON    DISCARDABLE     "res\\mfs.ico"
+IDI_JOYSTICK            ICON    DISCARDABLE     "res\\joystick.ico"
+IDI_SCREEN              ICON    DISCARDABLE     "res\\screen.ico"
+IDI_SOUND               ICON    DISCARDABLE     "res\\sound.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\splash.bmp"
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "res\\toolbar.bmp"
+IDB_NEW                 BITMAP  DISCARDABLE     "res\\new.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tStrg+N",                IDM_FILE_NEW
+        MENUITEM "&Open...",                    IDM_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tStrg+S",               IDM_FILE_SAVE
+        MENUITEM "Save &as...",                 IDM_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              IDM_FILE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt-F4",               IDM_FILE_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Toggle &Toolbar",             IDM_VIEW_TOOLBAR
+        MENUITEM "Toggle &Status Bar",          IDM_VIEW_STATUSBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Fullscreen\tAlt+Enter",      IDM_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "Change &Resolution...",       IDM_VIEW_CHANGERES
+    END
+    POPUP "&Simulation"
+    BEGIN
+        MENUITEM "&New",                        IDM_SIM_NEW
+        MENUITEM "&Pause\tF3",                  IDM_SIM_PAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Airplane",                   IDM_SIM_AIRPLANE, GRAYED
+        MENUITEM "&Helicopter",                 IDM_SIM_HELI, CHECKED
+    END
+    POPUP "&Parameter"
+    BEGIN
+        MENUITEM "&Common...\tF5",              IDM_PAR_COMMON
+        MENUITEM "&Wind...\tF6",                IDM_PAR_WIND
+        MENUITEM "&Airplane...\tF7",            IDM_PAR_AIRPLANE
+        MENUITEM "&Helicopter...\tF8",          IDM_PAR_HELI
+    END
+    POPUP "E&xtras"
+    BEGIN
+        MENUITEM "&Flight Recorder...",         IDM_EXTRAS_VIDREC, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Options...",                 IDM_EXTRAS_OPTIONS
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            IDM_HELP_INDEX
+        MENUITEM "&Keyboard",                   IDM_HELP_KEYS
+        MENUITEM SEPARATOR
+        MENUITEM "&Using Help",                 IDM_HELP_USINGHELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   IDM_HELP_ABOUT
+    END
+END
+
+DM MENU DISCARDABLE 
+BEGIN
+    POPUP "&View level"
+    BEGIN
+        MENUITEM "&Informational",              IDM_DEBUG_VIEW_INFOS
+        MENUITEM "&Warnings",                   IDM_DEBUG_VIEW_WARNINGS
+        MENUITEM "&Errors",                     IDM_DEBUG_VIEW_ERRORS
+        MENUITEM "&Fatals",                     IDM_DEBUG_VIEW_FATALS
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "Log &Application Messages",   IDM_DEBUG_LOG_APP_EVENTS
+    MENUITEM "Log &Device Driver Messages", IDM_DEBUG_LOG_DRV_EVENTS
+    MENUITEM SEPARATOR
+    MENUITEM "&Show Events",                IDM_DEBUG_SHOW_EVENTS, CHECKED
+    MENUITEM "&Clear Events",               IDM_DEBUG_CLEAR_EVENTS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 230, 148
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "About MFS Flight Simulator"
+FONT 8, "Helv"
+BEGIN
+    ICON            IDI_MFS,-1,10,10,20,20
+    LTEXT           "MFS Modellflugsimulator V1.0 for Window 95",-1,40,15,
+                    160,8
+    LTEXT           "Copyright © 1996 Marius Greuel",-1,40,25,160,8
+    LTEXT           "License:",-1,40,40,160,8
+    LTEXT           "",IDC_ABOUT_USER,40,50,160,8
+    LTEXT           "Virtual Memory:",-1,40,80,95,8
+    LTEXT           "",IDC_ABOUT_MEMAVAIL,150,80,72,8
+    LTEXT           "Memory Load:",-1,40,90,95,8
+    LTEXT           "",IDC_ABOUT_MEMLOAD,150,90,72,8
+    CONTROL         "",-1,"Static",SS_BLACKFRAME | SS_SUNKEN,40,115,180,1
+    PUSHBUTTON      "&OK",IDOK,170,125,50,14
+END
+
+IDD_PS_OPTIONS1 DIALOG DISCARDABLE  0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Input Devices"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "Input Device",-1,6,6,218,79
+    ICON            IDI_JOYSTICK,-1,14,20,20,18
+    LTEXT           "You can choose the input device to control your aircraft model.",
+                    -1,42,18,172,16
+    CONTROL         "&R/C with Interface",IDC_CTRL_USERC,"Button",
+                    BS_AUTORADIOBUTTON,42,39,110,10
+    CONTROL         "&Joystick",IDC_CTRL_USEJOYSTICK,"Button",
+                    BS_AUTORADIOBUTTON,42,50,48,10
+    PUSHBUTTON      "&Properties...",IDC_CTRL_SETTINGS,155,62,59,14
+    GROUPBOX        "Stick assignment",-1,6,90,218,105
+    ICON            IDI_JOYSTICK,-1,14,104,20,18
+    LTEXT           "You can choose the stick assignment for controlling your aircraft model. It is specified by an international norm called Mode 1-4. ",
+                    -1,42,102,172,24
+    CONTROL         "Mode &1: Gier/Nick left, Roll/Pitch right",
+                    IDC_CTRL_MODE1,"Button",BS_AUTORADIOBUTTON,42,130,158,10
+    CONTROL         "Mode &2: Gier/Pitch left, Roll/Nick right",
+                    IDC_CTRL_MODE2,"Button",BS_AUTORADIOBUTTON,42,141,158,10
+    CONTROL         "Mode &3: Roll/Nick left, Gier/Pitch right",
+                    IDC_CTRL_MODE3,"Button",BS_AUTORADIOBUTTON,42,152,158,10
+    CONTROL         "Mode &4: Roll/Pitch left, Gier/Nick right",
+                    IDC_CTRL_MODE4,"Button",BS_AUTORADIOBUTTON,42,163,158,10
+    CONTROL         "&Full throttle at the back",IDC_CTRL_FTBACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,178,127,10
+END
+
+IDD_PS_OPTIONS2 DIALOG DISCARDABLE  0, 0, 230, 215
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Preferences"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "Display Settings",-1,6,6,218,66
+    ICON            IDI_SCREEN,-1,14,20,20,18
+    LTEXT           "Select the resolution for fullscreen mode.",-1,42,18,
+                    172,16
+    LTEXT           "&Resolution:",-1,42,40,38,8
+    COMBOBOX        IDC_SCREEN_MODES,90,38,64,50,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use &Optimized Drawing Function",IDC_USEOPTDRAW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,55,175,10
+    GROUPBOX        "Audio Settings",-1,6,77,218,65
+    ICON            IDI_SOUND,-1,14,91,20,18
+    LTEXT           "Being prepared...",-1,42,89,172,24
+    PUSHBUTTON      "&Volume...",IDC_SOUND_VOLUME,166,119,48,14
+END
+
+IDD_PARAMETERS DIALOG DISCARDABLE  7, 19, 335, 198
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Change Parameter"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "You can use parameters to change the behavior of the aircraft. ",
+                    -1,15,25,145,16
+    CONTROL         "",IDC_PARAM_LISTVIEW,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,15,46,151,100,WS_EX_CLIENTEDGE
+    RTEXT           "Parameter",-1,172,47,42,8
+    EDITTEXT        IDC_PARAM_NAME,220,46,100,12,ES_READONLY | NOT 
+                    WS_TABSTOP
+    RTEXT           "Minimal",-1,172,63,42,8
+    EDITTEXT        IDC_PARAM_MIN,220,62,100,12,ES_READONLY | NOT WS_TABSTOP
+    RTEXT           "Maximal",-1,172,79,42,8
+    EDITTEXT        IDC_PARAM_MAX,220,78,100,12,ES_READONLY | NOT WS_TABSTOP
+    RTEXT           "Default",-1,172,95,42,8
+    EDITTEXT        IDC_PARAM_DEFAULT,220,94,100,12,ES_READONLY | NOT 
+                    WS_TABSTOP
+    RTEXT           "&Value",-1,172,111,42,8
+    EDITTEXT        IDC_PARAM_VALUE,220,110,100,12
+    CONTROL         "",IDC_PARAM_TRACKBAR,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_FIXEDLENGTH | WS_TABSTOP,220,126,100,20
+    LTEXT           "-100",IDC_PARAM_MIN2,220,147,30,8
+    RTEXT           "100",IDC_PARAM_MAX2,290,147,30,8
+    PUSHBUTTON      "&Load...",IDC_PARAM_LOAD,15,151,50,14
+    PUSHBUTTON      "&Save...",IDC_PARAM_SAVE,69,151,50,14
+    PUSHBUTTON      "&OK",IDOK,172,179,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,226,179,50,14
+    PUSHBUTTON      "&Apply",IDAPPLY,280,179,50,14
+    CONTROL         "",IDC_PARAM_TABCTRL,"SysTabControl32",WS_TABSTOP,5,5,
+                    325,170
+END
+
+IDD_WZ_NEW1 DIALOG DISCARDABLE  0, 0, 270, 140
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Assistent für neue Modelle"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Mit Hilfe dieses  Assistenten können Sie neue Modelle nach Ihren Vorstellungen kreieren.",
+                    -1,65,2,200,16,NOT WS_GROUP
+    LTEXT           "Klicken Sie auf 'Weiter', um fortzufahren.",-1,65,66,
+                    140,8,NOT WS_GROUP
+    LTEXT           "Wählen Sie dazu zunächst die Modellklasse aus, die Sie steuern möchten:",
+                    -1,65,20,200,16,NOT WS_GROUP
+    CONTROL         "Flugzeug",IDC_NEW_TYPE_AIRPLANE,"Button",
+                    BS_AUTORADIOBUTTON,80,42,100,10
+    CONTROL         "Hubschrauber",IDC_NEW_TYPE_HELI,"Button",
+                    BS_AUTORADIOBUTTON,80,52,100,10
+END
+
+IDD_WZ_NEW2 DIALOG DISCARDABLE  0, 0, 270, 140
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Wählen Sie die Modelldarstellung"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Sie haben die Möglichkeit, zwischen verschiedenen Modell- und Umweltdarstellungen zu wählen.",
+                    -1,65,2,200,16,NOT WS_GROUP
+    LTEXT           "Klicken Sie auf 'Weiter', um fortzufahren.",-1,65,95,
+                    188,8,NOT WS_GROUP
+    LTEXT           "Umweltdarstellung:",-1,65,67,100,8,NOT WS_GROUP
+    LTEXT           "Modelldarstellung:",-1,65,42,100,8,NOT WS_GROUP
+    COMBOBOX        IDC_NEW_MODEL,65,51,190,70,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_NEW_WORLD,65,76,190,70,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "In den beiden folgenden Listen sind alle verfügbaren Modell- und Umweltdarstellungen aufgelistet:",
+                    -1,65,20,200,16,NOT WS_GROUP
+END
+
+IDD_WZ_NEW3 DIALOG DISCARDABLE  0, 0, 270, 140
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Wählen Sie die Parametervorlage"
+FONT 8, "Helv"
+BEGIN
+    COMBOBOX        IDC_NEW_PARMS,65,54,190,70,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_TABSTOP
+    COMBOBOX        IDC_NEW_WIND,65,79,190,70,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_TABSTOP
+    COMBOBOX        IDC_NEW_COMMON,65,104,190,70,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_TABSTOP
+    LTEXT           "Sie haben die Möglichkeit, verschiedene Parameterdateien als Vorlage für das neue Modell zu verwenden. Wählen Sie dazu die Parameterdateien aus, die Ihrem Modell am nächsten kommen. Wenn Sie nicht wissen, welche Eigenschaften die jeweiligen Parameterdateie",
+                    -1,65,2,200,40,NOT WS_GROUP
+    LTEXT           "Flugzeug:",-1,65,45,100,8,NOT WS_GROUP
+    LTEXT           "Wind:",-1,65,70,100,8,NOT WS_GROUP
+    LTEXT           "Allgemein:",105,65,95,100,8,NOT WS_GROUP
+    LTEXT           "Klicken Sie auf 'Weiter', um fortzufahren.",-1,65,123,
+                    140,8,NOT WS_GROUP
+END
+
+IDD_WZ_NEW4 DIALOG DISCARDABLE  0, 0, 270, 140
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Fertig"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Der Assistent ist nun bereit, das Modell nach Ihren Vorgaben zu generieren.",
+                    -1,65,2,200,16,NOT WS_GROUP
+    LTEXT           "Klicken Sie auf 'Fertigstellen', um das Modell zu erstellen.",
+                    -1,65,20,200,16,NOT WS_GROUP
+    LTEXT           "Sie können den Dialog 'Parameter' verwenden, um die Flug- eigenschaften des Modells nachträglich zu ändern.",
+                    -1,65,114,201,16,NOT WS_GROUP
+    LTEXT           "Tip:",-1,65,105,20,8,NOT WS_GROUP
+END
+
+IDD_PROPERTIES DIALOG FIXED IMPURE  0, 0, 230, 215
+STYLE DS_MODALFRAME | DS_CENTER | DS_CONTEXTHELP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Neues Modell erstellen"
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        IDC_PROP_TITLE,60,20,155,12,ES_AUTOHSCROLL
+    EDITTEXT        6021,60,38,155,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_MODEL,60,77,142,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROP_PARMS,59,138,142,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_PROP_WORLD,60,94,142,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "->",IDC_PROP_MODEL_BROWSE,205,78,12,10
+    PUSHBUTTON      "->",IDC_PROP_PARMS_BROWSE,205,139,12,10
+    PUSHBUTTON      "->",IDC_PROP_WORLD_BROWSE,205,96,12,10
+    PUSHBUTTON      "&OK",IDOK,126,193,44,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,178,193,44,14
+    GROUPBOX        "Modellbeschreibung",101,6,6,218,52
+    LTEXT           "Titel:",-1,14,22,41,8,NOT WS_GROUP
+    LTEXT           "Modell:",-1,14,79,41,8,NOT WS_GROUP
+    LTEXT           "Parameter:",-1,15,140,41,9,NOT WS_GROUP
+    LTEXT           "Welt:",-1,14,97,41,9,NOT WS_GROUP
+    LTEXT           "Bemerkung:",-1,14,40,41,8,NOT WS_GROUP
+    GROUPBOX        "Datendateien:",-1,6,63,218,52
+    GROUPBOX        "Datendateien:",-1,7,126,218,60
+    PUSHBUTTON      "->",-1,205,154,12,10
+    LTEXT           "Wind:",106,15,156,41,9,NOT WS_GROUP
+    EDITTEXT        -1,59,153,142,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "->",110,205,170,12,10
+    LTEXT           "Allgemein:",109,15,172,41,9,NOT WS_GROUP
+    EDITTEXT        108,59,169,142,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "^N",           IDM_FILE_NEW,           ASCII   
+    "^S",           IDM_FILE_SAVE,          ASCII   
+    VK_F3,          IDM_SIM_PAUSE,          VIRTKEY 
+    VK_F4,          IDM_VIEW_USEGDI,        VIRTKEY 
+    VK_F5,          IDM_PAR_COMMON,         VIRTKEY 
+    VK_F6,          IDM_PAR_WIND,           VIRTKEY 
+    VK_F7,          IDM_PAR_AIRPLANE,       VIRTKEY 
+    VK_F8,          IDM_PAR_HELI,           VIRTKEY 
+    VK_RETURN,      IDM_VIEW_FULLSCREEN,    VIRTKEY, ALT
+    "D",            IDM_DEBUG_TOGGLE_MENU,  VIRTKEY, CONTROL, ALT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,1,1
+ PRODUCTVERSION 4,0,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704B0"
+        BEGIN
+            VALUE "CompanyName", "Marius Greuel\0"
+            VALUE "FileDescription", "MFS Modellflugsimulator\0"
+            VALUE "FileVersion", "4.00.1.01\0"
+            VALUE "InternalName", "mfs.exe\0"
+            VALUE "LegalCopyright", "Copyright © Marius Greuel 1997\0"
+            VALUE "OriginalFilename", "mfs.exe\0"
+            VALUE "ProductName", "MFS Modellflugsimulator\0"
+            VALUE "ProductVersion", "4.00.01.1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""version.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FATALERROR          "Es ist ein Fehler aufgetreten.\nDie Ursache können Sie in der Datei 'MfsLog.txt' nachlesen.\nWenn Sie den Fehler nicht beheben können, installieren Sie die Software erneut."
+    IDS_STATUSBAR           "Wait for something..."
+    IDS_SYSMENU             "Commands for manipulating the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PRESSF1FORHELP      "Press F1 for help."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OPTIONS             "Options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PATH_CONFIG         "Config"
+    IDS_PATH_MODEL          "Model"
+    IDS_PATH_PARMS          "Parameter"
+    IDS_PATH_WORLD          "World"
+    IDS_FILTER_SCENE        "Szenariodateien (*.IFS)\n\\0*.IFS\\0Alle Dateien (*.*)\\0*.*\\0"
+    IDS_FILTER_MODEL        "Modelldateien (*.IFM)\\0*.IFM\\0Alle Dateien (*.*)\\0*.*\\0"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILTER_PARMS        "Parameterdateien (*.IFP)\\0*.IFP\\0Alle Dateien (*.*)\\0*.*\\0"
+    IDS_FILTER_WORLD        "Weltdateien (*.IFW)\\0*.IFW\\0Alle Dateien (*.*)\\0*.*\\0"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_FILE_NEW            "Create a new configuration"
+    IDM_FILE_OPEN           "Open a configuration"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_FILE_SAVE           "Write the current configuration"
+    IDM_FILE_SAVEAS         "Write the current configuration to a new filename"
+    IDM_FILE_PROPERTIES     "Show the properties of the current configuration"
+    IDM_FILE_EXIT           "Quit the program"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_VIEW_TOOLBAR        "Hide or show the toolbar"
+    IDM_VIEW_STATUSBAR      "Hide or show the status bar"
+    IDM_VIEW_FULLSCREEN     "Toggle fullscreen mode"
+    IDM_VIEW_CHANGERES      "Change the display resolution"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_SIM_PAUSE           "Pause the simualtion"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXTRAS_VIDREC       "Start the flight recorder"
+    IDM_EXTRAS_SOUND        "Toggle sound effects"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXTRAS_RCCOM        "Change the R/C settings"
+    IDM_EXTRAS_OPTIONS      "Change options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HELP_INDEX          "Show MFS help topics"
+    IDM_HELP_KEYS           "Show help topics for keyboard usage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HELP_USINGHELP      "Show help for using help"
+    IDM_HELP_ABOUT          "Display about box"
+    IDM_HELP_ARROW          "Display help for selected items"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCSIZE              "Changes the window size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMOVE              "Changes the window position"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMINIMIZE          "Reduces the window to an icon"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMAXIMIZE          "Enlarges the window to full size (fullscreen mode)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCCLOSE             "Exit the program"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCRESTORE           "Restore the window to normal size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REGK_MFS            "Software\\MFS Systems\\MFS"
+    IDS_REGK_MFS_VER        "1.01b"
+    IDR_TOOLBAR             "Toolbar"
+    IDR_STATUSBAR           "Statusbar"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

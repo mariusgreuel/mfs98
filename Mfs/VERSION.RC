@@ -1,0 +1,14 @@
+/////////////////////////////////////////////////////////////////////////////
+// Version Information
+
+#include "version.h"
+
+#define VER_FILEDESCRIPTION_STR     "R/C user interface\0"
+#define VER_INTERNALNAME_STR        "rccom.dll\0"
+#define VER_FILETYPE                VFT_DLL
+#define VER_FILESUBTYPE             0
+#define VER_FILEVERSION             4,0,VER_MAJOR,VER_MINOR
+#define VER_FILEVERSION_STR         VER_STRING
+
+#include "..\common\mfs.ver"
+
